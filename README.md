@@ -1,3 +1,2 @@
 Introduction:
-This project implements AI/ML based zero trust network access (ZTNA) model to secure secure Modbus TCP/IP traffic from industrial IoT devices. It aims to classify network packets in real time and block suspicious or foreign data using a deep learning model trained in TensorFlow.
-
+This project implements AI/ML based zero trust network access (ZTNA) model to secure secure Modbus TCP/IP traffic from industrial IoT devices. It aims to classify network packets in real time and block suspicious or foreign data using a deep learning model trained in TensorFlow. The project addresses the limitations of manual network monitoring and traditional rule-based defenses. The system enhances network threat detection, privacy-preserving traffic analysis, and automated packet classification, particularly useful in industrial environments with mission-critical equipment.
