@@ -8,7 +8,7 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.callbacks import EarlyStopping
 
 # Load dataset
-df = pd.read_csv("modbus_dummy.csv")  # Replace with your cleaned dataset path
+df = pd.read_csv("IoT_Modbus_csv.csv")  # Replace with your cleaned dataset path
 
 # Preview
 print("📊 Dataset preview:")
