@@ -8,22 +8,22 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.callbacks import EarlyStopping
 
 # Load dataset
-df = pd.read_csv("IoT_Modbus_csv.csv")  # Replace with your cleaned dataset path
+df = pd.read_csv("IoT_Modbus_csv.csv")  
 
 # Preview
 print("📊 Dataset preview:")
 print(df.head())
 
-# Feature Selection (Assuming these are your sensor reads)
+
 features = ['FC1_Read', 'FC2_Read', 'FC3_Read', 'FC4_Read']
 X = df[features].values
 y = df['label'].values  # 0 = normal, 1 = threat/foreign
 
-# Normalize the features
+
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Save the scaler for inference
+
 import joblib
 joblib.dump(scaler, "ztna_scaler.pkl")
 
@@ -53,6 +53,4 @@ history = model.fit(X_train, y_train, validation_data=(X_test, y_test),
 loss, acc = model.evaluate(X_test, y_test, verbose=0)
 print(f"\n✅ Test Accuracy: {acc:.4f}")
 
-# Save the model
-model.save("ztna_modbus_model.h5")
-print("💾 Model saved to 'ztna_modbus_model.h5'")
+
